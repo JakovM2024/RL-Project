@@ -47,10 +47,10 @@ class GridWorld:
         self.cols = 5
 
         # Starting position (top-left corner)
-        self.start = (0, 0)
+        self.start = (4, 4)
 
         # Goal position (bottom-right corner)
-        self.goal = (4, 4)
+        self.goal = (0, 0)
 
         # Wall positions — the agent cannot move into these cells
         self.walls = [(1, 1), (1, 2), (3, 1), (1, 3), (3,3)]

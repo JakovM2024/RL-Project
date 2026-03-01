@@ -34,3 +34,5 @@ Thumbs.db
 # *.pkl
 # *.pt
 # *.pth
+*.png
+__pycache__/
