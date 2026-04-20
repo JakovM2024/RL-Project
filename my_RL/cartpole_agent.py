@@ -78,11 +78,11 @@ class ActorCriticAgent:
         return advantages, returns
  
     
-    def update(self, last_value = 0): # check in about this 
+    def update(self, last_value = 0): 
         advantages, returns = self.compute_gae(last_value)
 
         states = torch.FloatTensor(np.array(self.states))
-        actions = torch.LongTensor(self.actions) #what's a long tensor
+        actions = torch.LongTensor(self.actions) 
         old_log_probs = torch.FloatTensor(self.log_probs)
         advantages = torch.FloatTensor(advantages)
         returns = torch.FloatTensor(returns)

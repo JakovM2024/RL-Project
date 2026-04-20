@@ -242,6 +242,8 @@ class ActorCriticAgent:
             td_target = reward_tensor
         else:
             td_target = reward_tensor + self.gamma * next_value.detach()
+        # .detach() means "don't compute gradients for this" — we only want
+        # to update the critic based on the current value, not the target
 
         # --- STEP 3: Compute the advantage ---
         advantage = td_target - current_value
